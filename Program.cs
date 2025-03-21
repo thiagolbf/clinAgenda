@@ -1,3 +1,5 @@
+using BackendClinAgenda.src.Core.Interfaces;
+using BackendClinAgenda.src.Infrastructure.Repositories;
 using ClinAgenda.src.Application.UseCases;
 using ClinAgenda.src.Core.Interfaces;
 using ClinAgenda.src.Infrastructure.Repositories;
@@ -21,6 +23,7 @@ builder.Services.AddScoped<IStatusRepository, StatusRepository>();
 builder.Services.AddScoped<StatusUseCase>();
 builder.Services.AddScoped<ISpecialtyRepository, SpecialtyRepository>();
 builder.Services.AddScoped<SpecialtyUseCase>();
+builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 
 
 var app = builder.Build();
